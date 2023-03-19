@@ -4,6 +4,7 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
+
 search.addEventListener('click', () => {
     const APIKey = '2161be548b4aa191dfaf00aff64d7033';
     const city = document.querySelector('.search-box input').value;
@@ -14,6 +15,7 @@ search.addEventListener('click', () => {
     fetch(`http://localhost:8080/v1/current-weather-${city}`)
         .then(response => response.json())
         .then(json => {
+
 
             if (json.cod === '404') {
                 container.style.height = '400px';
@@ -58,10 +60,12 @@ search.addEventListener('click', () => {
                     image.src = '';
             }
 
-            temperature.innerHTML = `${parseFloat(json.mainData.temp)}<span>°C</span>`
+            temperature.innerHTML = `${parseInt(json.mainData.temperature)}<span>°C</span>`
             description.innerHTML = `${json.weatherData[0].description}`;
             humidity.innerHTML = `${json.mainData.humidity}%`;
-            wind.innerHTML = `${parseFloat(json.windData.speed)}Km/h`;
+            wind.innerHTML = `${parseInt(json.windData.windSpeed)}Km/h`;
+            console.log(json.windData.speed);
+
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
