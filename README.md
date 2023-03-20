@@ -12,7 +12,7 @@ Frontend for weather app that is communicating with Spring Boot application and 
 - CSS
 
 ## Installation
-- Clone the repository: `git clone https://github.com/your-username/weather-app-view.git`
+- Clone the repository: `git clone https://github.com/jakub-piecuch/weather-app-view.git`
 - Open the project in your IDE
 - Use e.g. VS Live Server extension to run it
 
