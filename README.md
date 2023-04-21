@@ -2,9 +2,12 @@
 Frontend for weather app that is communicating with Spring Boot application and displays current weather information for specific location.
 
 ## Table of Contnet
+- Screenshots
 - Technlologies
 - Installation
 - Usage
+
+## Screenshots
 
 ## Technologies
 - JavaScript
