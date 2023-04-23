@@ -12,7 +12,7 @@ search.addEventListener('click', () => {
         return;
 
         
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+    fetch(`http://localhost:8080/v1/current-weather-${city}`)
         .then(response => response.json())
         .then(json => {
 
@@ -59,10 +59,11 @@ search.addEventListener('click', () => {
                     image.src = '';
             }
 
-            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`
-            description.innerHTML = `${json.weather[0].description}`;
-            humidity.innerHTML = `${json.main.humidity}%`;
-            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temperature.innerHTML = `${parseInt(json.mainData.temperature)}<span>°C</span>`
+            description.innerHTML = `${json.weatherData[0].description}`;
+            humidity.innerHTML = `${json.mainData.humidity}%`;
+            wind.innerHTML = `${parseInt(json.windData.windSpeed)}Km/h`;
+            console.log(json.windData.speed);
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
