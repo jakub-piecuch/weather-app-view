@@ -5,9 +5,7 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
-    const APIKey = '2161be548b4aa191dfaf00aff64d7033';
     const city = document.querySelector('.search-box input').value;
-
     if (city === '')
         return;
 
@@ -34,7 +32,7 @@ search.addEventListener('click', () => {
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
 
-            switch (json.weather[0].main) {
+            switch (json.weatherData[0].main) {
                 case 'Clear':
                     image.src = 'images/clear.png';
                     break;
@@ -63,7 +61,6 @@ search.addEventListener('click', () => {
             description.innerHTML = `${json.weatherData[0].description}`;
             humidity.innerHTML = `${json.mainData.humidity}%`;
             wind.innerHTML = `${parseInt(json.windData.windSpeed)}Km/h`;
-            console.log(json.windData.speed);
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
