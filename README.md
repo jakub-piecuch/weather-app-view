@@ -8,7 +8,7 @@ Frontend for weather app that is communicating with Spring Boot application and 
 - Usage
 
 ## Screenshots
-![MainViewSearch](https://imgur.com/a/vVHx1UN)
+https://imgur.com/a/mYsvxZ9
 
 ## Technologies
 - JavaScript
