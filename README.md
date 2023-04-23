@@ -19,6 +19,7 @@ https://imgur.com/a/mYsvxZ9
 - Clone the repository: `git clone https://github.com/jakub-piecuch/weather-app-view.git`
 - Open the project in your IDE
 - Use e.g. VS Live Server extension to run it
+- also chceck backend for this app here https://github.com/jakub-piecuch/weather-app
 
 ## Usage
 To use the application just run it for example with VSC Live Server extension and type desired location (city or country) you want to check and press search button.
