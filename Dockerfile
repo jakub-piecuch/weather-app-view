@@ -1,17 +1,16 @@
-# Use the latest LTS version of Node.js as the base image
-FROM node:14
+FROM node:14-alpine
 
-# Create a working directory for the application
+# Set the working directory to /app
 WORKDIR /app
 
-# Copy the application files to the working directory
-COPY . /app
+# Copy the static files and images to the container
+COPY index.html .
+COPY index.js .
+COPY style.css .
+COPY images/ images/
 
-# Install the dependencies
-RUN npm install
+# Install http-server globally
+RUN npm install -g http-server
 
-# Expose port 3000 for the application
-EXPOSE 3000
-
-# Start the application
-CMD ["npm", "start"]
+# Set the command to start the http-server and serve the static files
+CMD ["http-server", "-p", "3050", "."]
