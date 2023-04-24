@@ -1,0 +1,7 @@
+{
+    "name": "weather-app",
+    "main": "index.js",
+    "dependencies": {
+        "moment": "^2.29.4"
+    }
+}
